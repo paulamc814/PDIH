@@ -40,8 +40,8 @@ int getvideomode(){
 	return modo;
 }
 
-
-int getche(){  //Leer de teclado
+//Leer de teclado
+int getche(){  
 	 union REGS inregs, outregs;
 	 int caracter;
 
@@ -52,7 +52,8 @@ int getche(){  //Leer de teclado
 	 return caracter;
 }
 
-void mi_putchar(char c){ //Escribir lo leido
+//Escribir lo leido
+void mi_putchar(char c){ 
 	 union REGS inregs, outregs;
 
 	 inregs.h.ah = 2;
@@ -93,16 +94,6 @@ void setcursortype(int tipo_cursor){
 	int86(0x10, &inregs, &outregs);
 }
 
-// pone un pixel en la coordenada X,Y de color C
-void pixel(int x, int y, BYTE C){
-   union REGS inregs, outregs;
-   inregs.x.cx = x;
-   inregs.x.dx = y;
-   inregs.h.al = C;
-   inregs.h.ah = 0x0C;
-   int86(0x10, &inregs, &outregs);
-}
-
 //Modifica el color con el que se mostrarán los caracteres
 void textcolor(BYTE color){
 	COLORTEXTO = color;
@@ -134,16 +125,56 @@ void clrsc(){
 	int86( 0x10, &regs, &regs );
 }
 
+//Función que crea un recuadro en la posición y colores indicados
+void createbox(int izq_x, int izq_y, int dcha_x, int dcha_y, BYTE color, BYTE fondo){
+	int i,j;
+
+	for(i=izq_x; i<dcha_x; i++){
+		for(j=izq_y; j<dcha_y;j++){
+			gotoxy(i,j);
+			textcolor(color);
+			textbackground(fondo);
+			cputchar('*');
+			printf("$");
+		}
+	}
+}
+
+//Función que activa el modo gráfico
+void modo_grafico(){
+	setvideomode(4);
+}
+
+// pone un pixel en la coordenada X,Y de color C
+void pixel(int x, int y, BYTE C){
+   union REGS inregs, outregs;
+   inregs.x.cx = x;
+   inregs.x.dx = y;
+   inregs.h.al = C;
+   inregs.h.ah = 0x0C;
+   int86(0x10, &inregs, &outregs);
+}
+
+//Función que dibuja la pantalla utilizando la función pixel
+void screendrawn(){
+	int i,j;
+	for(i=0; i<1000; i++){
+		for(j=0; j<1000; j++){
+    		pixel(i,j, i%4 );
+		}
+	}
+
+}
 
 int main(){
 
-	int tmp, i;
+	int tmp;
 	int modo;
 
 	printf("\nPulsa una tecla...  ");
 	tmp = getche(); 
 
-mi_pausa();
+	mi_pausa();
 
 	printf("\nHas pulsado: ");
     mi_putchar((char)tmp); 
@@ -189,33 +220,25 @@ mi_pausa();
 	cputchar('A');
 	mi_pausa();
 
-	printf("\nCrea una línea de colores:  ");
+	printf("\nCrea un recuadro de colores:  ");
 	clrsc();
 
-	for(i=0; i<20; i++){
-		gotoxy(i,i);
-		textcolor(i);
-		textbackground(1);
-		cputchar('A');
-		printf("*");
-	}
+	createbox(2,3,25,15,2,5);
             
 	mi_pausa();
 
 	clrsc();
-	
 
-/*
-	mi_modo_video(MODOGRAFICO); //gráfico
-	pixel(10,10,0);
-	pixel(10,50,1);
-	pixel(15,60,2);
-	pixel(20,70,3);
+	printf("\nPor último lo vamos a pasar a modo gráfico.\n");
 
-	for(i=0; i<100; i++){
-    	pixel(i,i, i%4 );
-	} 
-	*/
+	modo_grafico();
+
+	screendrawn();
+
+	mi_pausa();
+
+	printf("\nPulsa cualquier tecla para terminar....");
+
 	mi_pausa();
 
 	return 0;
