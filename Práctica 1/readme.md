@@ -92,50 +92,68 @@ justo después de haber indicado el modo de video 3 de la función anterior.
 
 ## Función *textcolor()* y *textbackground()*
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/textcolor1.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/textcolor1.JPG " width= "700" >
+</p>
 
 Estas funciones únicamente cambian el color de las letras y del fondo, y no hacen uso de ninguna interrupción sino de unas variables globales. 
 
 ## Función *clrscr()*
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/clrscr1.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/clrscr1.JPG " width= "700" >
+</p>
 
 Esta función se encarga únicamente de limpiar la pantalla completa. Usamos la *interrupción 10* y la *función 15* y *función 0*.
 
 ## Función *cputchar()*
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/cputchar1.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/cputchar1.JPG " width= "700" >
+</p>
 
 Esta función escribe un caracter en pantalla del color y fondo indicado actualmente.
 Utilizamos la **interrupción 10** y la *función 9*. El registro AL contiene el carácter que se desea escribir y el registro BL contiene el color de fondo que se desea usar, en sus primeros 4 bits, y el color de texto que se desea usar, en los 4 siguientes.
 
 Para su comprobación vamos a escribir una 'A' en color magenta sobre un fondo verde. 
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/cputchar2.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/cputchar2.JPG " width= "700" >
+</p>
 
 ## Función *getche()*
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getche1.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getche1.JPG " width= "700" >
+</p>
 
 Graias a esta función podremos leer un carácter de la pantalla. **Interrupción 21** y *función 1*.
 Hacemos uso de la función *mi_putchar* para poder escribir el carácter leído.
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getche2.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getche2.JPG " width= "700" >
+</p>
 
 ## Función *createbox()*
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/createbox1.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/createbox1.JPG " width= "700" >
+</p>
 
 Es mi función creada para dibujar un cuadrado indicándole las coordenadas y colores en modo texto.  
 No necesitamos hacer uso de ninguna interrupción únicamente creamos dos bucles for anidados y hacemos uso de las funciones
 anteriorente comentadas. 
 
 Vamos a crear un cuadrado de los colores anteriormente indicados anteriormente.
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/createbox2.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/createbox2.JPG " width= "700" >
+</p>
 
 ## Función *screendrawn()*
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/screendrawn1.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/screendrawn1.JPG " width= "700" >
+</p>
 
 En esta función creo un dibujo en la pantalla en modo gráfico(CGA). 
 Primero utilizo la función *modo_grafico()* para establecer el modo. A continuación itero dos bucles haciendo uso de la función *pixel()*
@@ -143,4 +161,6 @@ la cuál pone el pixel en la posición y en el color indicado.
 
 Hemos realizado el siguiente dibujo para mostrar su funcionamiento.
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/screendrawn2.JPG)
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/screendrawn2.JPG " width= "700" >
+</p>
