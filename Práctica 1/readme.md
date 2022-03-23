@@ -22,3 +22,9 @@ través de la función no estándar *int86()*, que viene definida en el fichero 
 ## Función *gotoxy()*
 
 ![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy1.JPG)
+
+Esta función nos permite colocar el cursor en una posición determinada de la pantalla. El número de interrupción utilizada como podemos observar es la número 10, y la función número 2. El registro AH = 2, DH = y, DL = x, BH = 0 y salida no tiene. 
+
+Para comprobar su funcionamiento hemos cologado el cursor en la posición *gotoxy(15,7);* y hemos escrito Hola, por pantalla *printf("Hola");*
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy2.JPG)
