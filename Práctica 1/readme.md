@@ -21,4 +21,4 @@ través de la función no estándar *int86()*, que viene definida en el fichero 
 
 ## Función *gotoxy()*
 
-![imagen](Pra)
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy1.JPG)
