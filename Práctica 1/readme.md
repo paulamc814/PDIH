@@ -21,7 +21,7 @@ través de la función no estándar *int86()*, que viene definida en el fichero 
 
 ## Función *mi_pausa()*
 
-![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/mi_pausa.JPG)
+![imagen width = "300"](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/mi_pausa.JPG )
 
 Función que vamos a utilizar durante todo el código que pasa el control al teclado para leer una pulsación y poder realizar
 una pausa para mostrar con claridad todas las implementaciones del las funciones explicadas a continuación. Llama a la **interrupción 21**
@@ -34,7 +34,7 @@ y la *función 8*.
 
 Esta función nos permite colocar el cursor en una posición determinada de la pantalla. El número de interrupción utilizada como podemos observar es la **interrupción 10**, y la *función número 2*. El registro AH = 2, DH = y, DL = x, BH = 0 y salida no tiene. 
 
-Para comprobar su funcionamiento hemos cologado el cursor en la posición *gotoxy(15,7);* y hemos escrito Hola, por pantalla *printf("Hola");*
+Para comprobar su funcionamiento hemos colocado el cursor en la posición *gotoxy(15,7);* y hemos escrito Hola, por pantalla *printf("Hola");*
 
 ![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy2.JPG)
 
@@ -67,7 +67,8 @@ Para comprobar su funcionamiento hemos realizado un cambio a modo 1 (letras gran
 
 Esta función nos muestra el tipo de modo de vídeo que tenemos activo actualmente. Volvemos a utilizar la **interrupción 10** y la *función F*. En este caso si disponemos de una salida, la cual está en el registro AL.
 
-Para comprobar su funcionamiento utilizamos un *printf("\nEl modo de video es %i\n", modo);* justo después de haber indicado el modo de video 3 de la función anterior. 
+Para comprobar su funcionamiento utilizamos un *printf("\nEl modo de video es %i\n", modo);* 
+justo después de haber indicado el modo de video 3 de la función anterior. 
 
 ![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getvideomode2.JPG)
 
