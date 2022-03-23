@@ -14,8 +14,8 @@ través de la función no estándar *int86()*, que viene definida en el fichero 
 * textcolor(): modifica el color de primer plano con que se mostrarán los caracteres
 * textbackground(): modifica el color de fondo con que se mostrarán los caracteres
 * clrscr(): borra toda la pantalla
-*  cputchar(): escribe un carácter en pantalla con el color indicado actualmente
-*  getche(): obtiene un carácter de teclado y lo muestra en pantalla
+* cputchar(): escribe un carácter en pantalla con el color indicado actualmente
+* getche(): obtiene un carácter de teclado y lo muestra en pantalla
 * Implementar una función que permita dibujar un recuadro en la pantalla en modo texto. Recibirá como parámetros las coordenadas superior izquierda e inferior derecha del recuadro, el color de primer plano y el color de fondo.
 * Implementar en lenguaje C un programa que establezca modo gráfico CGA (modo=4) para crear dibujos sencillos en pantalla.
 
@@ -83,8 +83,45 @@ Estas funciones únicamente cambian el color de las letras y del fondo, y no hac
 
 Esta función se encarga únicamente de limpiar la pantalla completa. Usamos la *interrupción 10* y la *función 15* y *función 0*.
 
+## Función *cputchar()*
 
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/cputchar1.JPG)
 
+Esta función escribe un caracter en pantalla del color y fondo indicado actualmente.
+Utilizamos la **interrupción 10** y la *función 9*. El registro AL contiene el carácter que se desea escribir y el registro BL contiene el color de fondo que se desea usar, en sus primeros 4 bits, y el color de texto que se desea usar, en los 4 siguientes.
 
+Para su comprobación vamos a escribir una 'A' en color magenta sobre un fondo verde. 
 
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/cputchar2.JPG)
 
+## Función *getche()*
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getche1.JPG)
+
+Graias a esta función podremos leer un carácter de la pantalla. **Interrupción 21** y *función 1*.
+Hacemos uso de la función *mi_putchar* para poder escribir el carácter leído.
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getche2.JPG)
+
+## Función *createbox()*
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/createbox1.JPG)
+
+Es mi función creada para dibujar un cuadrado indicándole las coordenadas y colores en modo texto.  
+No necesitamos hacer uso de ninguna interrupción únicamente creamos dos bucles for anidados y hacemos uso de las funciones
+anteriorente comentadas. 
+
+Vamos a crear un cuadrado de los colores anteriormente indicados anteriormente.
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/createbox2.JPG)
+
+## Función *screendrawn()*
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/screendrawn1.JPG)
+
+En esta función creo un dibujo en la pantalla en modo gráfico(CGA). 
+Primero utilizo la función *modo_grafico()* para establecer el modo. A continuación itero dos bucles haciendo uso de la función *pixel()*
+la cuál pone el pixel en la posición y en el color indicado. 
+
+Hemos realizado el siguiente dibujo para mostrar su funcionamiento.
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/screendrawn2.JPG)
