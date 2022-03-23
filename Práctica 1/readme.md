@@ -21,7 +21,7 @@ través de la función no estándar *int86()*, que viene definida en el fichero 
 
 ## Función *mi_pausa()*
 
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/mi_pausa.JPG " width= "700" height="700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/mi_pausa.JPG " width= "700" >
 
 Función que vamos a utilizar durante todo el código que pasa el control al teclado para leer una pulsación y poder realizar
 una pausa para mostrar con claridad todas las implementaciones del las funciones explicadas a continuación. Llama a la **interrupción 21**
@@ -30,13 +30,13 @@ y la *función 8*.
 
 ## Función *gotoxy()*
 
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy1.JPG " width= "700" height="700">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy1.JPG " width= "700" >
 
 Esta función nos permite colocar el cursor en una posición determinada de la pantalla. El número de interrupción utilizada como podemos observar es la **interrupción 10**, y la *función número 2*. El registro AH = 2, DH = y, DL = x, BH = 0 y salida no tiene. 
 
 Para comprobar su funcionamiento hemos colocado el cursor en la posición *gotoxy(15,7);* y hemos escrito Hola, por pantalla *printf("Hola");*
 
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy2.JPG " width= "700" height="700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy2.JPG " width= "700" >
 
 ## Función *setcursortype()*
 
