@@ -190,7 +190,8 @@ int main(){
 
 	modo = getvideomode();
 	printf("\nEl modo de video es %i\n", modo);
-
+	mi_pausa();
+	
 	clrsc();
 
 	printf("\nCursor invisible: ");

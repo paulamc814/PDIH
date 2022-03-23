@@ -11,9 +11,9 @@ través de la función no estándar *int86()*, que viene definida en el fichero 
 * setcursortype(): fijar el aspecto del cursor, debe admitir tres valores: INVISIBLE, NORMAL y GRUESO.
 * setvideomode(): fija el modo de video deseado
 * getvideomode(): obtiene el modo de video actual
-*  textcolor(): modifica el color de primer plano con que se mostrarán los caracteres
-*  textbackground(): modifica el color de fondo con que se mostrarán los caracteres
-*  clrscr(): borra toda la pantalla
+* textcolor(): modifica el color de primer plano con que se mostrarán los caracteres
+* textbackground(): modifica el color de fondo con que se mostrarán los caracteres
+* clrscr(): borra toda la pantalla
 *  cputchar(): escribe un carácter en pantalla con el color indicado actualmente
 *  getche(): obtiene un carácter de teclado y lo muestra en pantalla
 * Implementar una función que permita dibujar un recuadro en la pantalla en modo texto. Recibirá como parámetros las coordenadas superior izquierda e inferior derecha del recuadro, el color de primer plano y el color de fondo.
@@ -60,5 +60,28 @@ Para comprobar su funcionamiento hemos realizado un cambio a modo 1 (letras gran
 
 ![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/setvideomode2.JPG)
 ![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/setvideomode3.JPG)
+
+## Función *getvideomode()*
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getvideomode1.JPG)
+
+Esta función nos muestra el tipo de modo de vídeo que tenemos activo actualmente. Volvemos a utilizar la **interrupción 10** y la *función F*. En este caso si disponemos de una salida, la cual está en el registro AL.
+
+Para comprobar su funcionamiento utilizamos un *printf("\nEl modo de video es %i\n", modo);* justo después de haber indicado el modo de video 3 de la función anterior. 
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/getvideomode2.JPG)
+
+## Función *textcolor()* y *textbackground()*
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/textcolor1.JPG)
+
+Estas funciones únicamente cambian el color de las letras y del fondo, y no hacen uso de ninguna interrupción sino de unas variables globales. 
+
+## Función *clrscr()*
+
+![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/clrscr1.JPG)
+
+
+
 
 
