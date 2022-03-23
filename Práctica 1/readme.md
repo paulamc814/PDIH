@@ -1,6 +1,6 @@
 Práctica realaizada por Alejandro Sánchez Hens y Paula Molina Castillo
 
-# PRÁCTICA 1: Entrada/Salida utilizando interrupciones con lenguaje c
+# PRÁCTICA 1: Entrada/Salida utilizando interrupciones con lenguaje C
 
 En esta práctica se va a acceder a las rutinas de servicio a interrupción de la BIOS para teclado y vídeo desde el
 sistema operativo **MS-DOS**. Se va a utilizar el lenguaje de programación C para realizar interrupciones software a
@@ -80,6 +80,9 @@ Estas funciones únicamente cambian el color de las letras y del fondo, y no hac
 ## Función *clrscr()*
 
 ![imagen](https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/clrscr1.JPG)
+
+Esta función se encarga únicamente de limpiar la pantalla completa. Usamos la *interrupción 10* y la *función 15* y *función 0*.
+
 
 
 
