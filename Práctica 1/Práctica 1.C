@@ -14,6 +14,7 @@ BYTE COLORFONDO =7;
 //Función que le pase el control al teclado para leer una pulsacion 
 void mi_pausa(){
    union REGS inregs, outregs;
+
 	 inregs.h.ah = 8;
 	 int86(0x21, &inregs, &outregs); //llamar al nucleo del SO para que le pase el control al teclado y se pare INT 21
 }
@@ -21,6 +22,7 @@ void mi_pausa(){
 //Fija el modo de video deseado
 void setvideomode(BYTE modo){
 	union REGS inregs, outregs; 
+
 	inregs.h.ah = 0x00; //Dar valores para cada uno de los registros, parte h = reg de tipo char (8 bits)
 	inregs.h.al = modo; 
 	int86(0x10,&inregs,&outregs); //INT 10 para cambiar el modo de video
@@ -31,8 +33,8 @@ void setvideomode(BYTE modo){
 
 int getvideomode(){
 	int modo;
-
 	union REGS inregs, outregs;
+
 	inregs.h.ah = 0x0F;
 	int86(0x10,&inregs,&outregs);
 	modo = outregs.h.al;
@@ -43,8 +45,8 @@ int getvideomode(){
 //Leer de teclado
 int getche(){  
 	 int caracter;
+	union REGS inregs, outregs;
 
-	 union REGS inregs, outregs;
 	 inregs.h.ah = 1;
 	 int86(0x21, &inregs, &outregs);
 
@@ -76,6 +78,7 @@ void gotoxy(int x, int y){
 //Función que fija el aspecto del cursor
 void setcursortype(int tipo_cursor){
 	union REGS inregs, outregs;
+
 	inregs.h.ah = 0x01;
 	switch(tipo_cursor){
 		case 0: //invisible
@@ -107,6 +110,7 @@ void textbackground(BYTE fondo){
 //Escribe un caracter en pantalla con el color indicado actualmente
 void cputchar(unsigned char letra){
 	union REGS inregs, outregs;
+
 	inregs.h.ah = 0x09;
 	inregs.h.al = letra;
 	inregs.h.bl = (COLORFONDO << 4) | COLORTEXTO;
@@ -119,6 +123,7 @@ void cputchar(unsigned char letra){
 //Borra toda la pantalla
 void clrsc(){
 	union REGS regs;
+
 	regs.h.ah = 15; 
 	int86( 0x10, &regs, &regs );
 	regs.h.ah = 0; 
@@ -148,6 +153,7 @@ void modo_grafico(){
 // pone un pixel en la coordenada X,Y de color C
 void pixel(int x, int y, BYTE C){
    union REGS inregs, outregs;
+
    inregs.x.cx = x;
    inregs.x.dx = y;
    inregs.h.al = C;
@@ -158,6 +164,7 @@ void pixel(int x, int y, BYTE C){
 //Función que dibuja la pantalla utilizando la función pixel
 void screendrawn(){
 	int i,j;
+	
 	modo_grafico();
 	for(i=0; i<1000; i++){
 		for(j=0; j<1000; j++){
@@ -178,7 +185,7 @@ int main(){
 	mi_pausa();
 
 	printf("\nHas pulsado: ");
-    mi_putchar((char)tmp); 
+	mi_putchar((char)tmp); 
 	mi_pausa();
 	
 	setvideomode(MODOTEXTOGRANDE);  // modo 1 -> 40x25 (letras grandes)

@@ -16,8 +16,8 @@ través de la función no estándar *int86()*, que viene definida en el fichero 
 * clrscr(): borra toda la pantalla
 * cputchar(): escribe un carácter en pantalla con el color indicado actualmente
 * getche(): obtiene un carácter de teclado y lo muestra en pantalla
-* Implementar una función que permita dibujar un recuadro en la pantalla en modo texto. Recibirá como parámetros las coordenadas superior izquierda e inferior derecha del recuadro, el color de primer plano y el color de fondo.
-* Implementar en lenguaje C un programa que establezca modo gráfico CGA (modo=4) para crear dibujos sencillos en pantalla.
+* Implementar una función que permita dibujar un recuadro en la pantalla en modo texto. Recibirá como parámetros las coordenadas superior izquierda e inferior derecha del recuadro, el color de primer plano y el color de fondo
+* Implementar en lenguaje C un programa que establezca modo gráfico CGA (modo=4) para crear dibujos sencillos en pantalla
 
 ## Función *mi_pausa()*
 
@@ -104,7 +104,7 @@ Estas funciones únicamente cambian el color de las letras y del fondo, y no hac
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/clrscr1.JPG " width= "700" >
 </p>
 
-Esta función se encarga únicamente de limpiar la pantalla completa. Usamos la *interrupción 10* y la *función 15* y *función 0*.
+Esta función se encarga únicamente de limpiar la pantalla completa. Usamos la **interrupción 10** y la *función 15* y *función 0*.
 
 ## Función *cputchar()*
 
