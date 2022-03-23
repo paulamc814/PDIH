@@ -42,9 +42,9 @@ int getvideomode(){
 
 //Leer de teclado
 int getche(){  
-	 union REGS inregs, outregs;
 	 int caracter;
 
+	 union REGS inregs, outregs;
 	 inregs.h.ah = 1;
 	 int86(0x21, &inregs, &outregs);
 
@@ -158,6 +158,7 @@ void pixel(int x, int y, BYTE C){
 //Función que dibuja la pantalla utilizando la función pixel
 void screendrawn(){
 	int i,j;
+	modo_grafico();
 	for(i=0; i<1000; i++){
 		for(j=0; j<1000; j++){
     		pixel(i,j, i%4 );
@@ -187,6 +188,8 @@ int main(){
  	setvideomode(MODOTEXTO);  // modo 3 -> 80x25 (letras pequenas) este es el modo de video normal
 	printf("\nCambio a letras pequenias...  ");
 	mi_pausa();
+
+	clrsc();
 
 	modo = getvideomode();
 	printf("\nEl modo de video es %i\n", modo);
@@ -232,7 +235,7 @@ int main(){
 
 	printf("\nPor último lo vamos a pasar a modo gráfico.\n");
 
-	modo_grafico();
+//	modo_grafico();
 
 	screendrawn();
 
