@@ -21,7 +21,9 @@ través de la función no estándar *int86()*, que viene definida en el fichero 
 
 ## Función *mi_pausa()*
 
->>>>> <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/mi_pausa.JPG " width= "700" >
+<p align="center">
+    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/mi_pausa.JPG " width= "700" >
+</p>
 
 Función que vamos a utilizar durante todo el código que pasa el control al teclado para leer una pulsación y poder realizar
 una pausa para mostrar con claridad todas las implementaciones del las funciones explicadas a continuación. Llama a la **interrupción 21**
