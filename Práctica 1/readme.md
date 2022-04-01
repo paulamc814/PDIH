@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Práctica realizada por Alejandro Sánchez Hens y Paula Molina Castillo
+=======
+Práctica realaizada por Alejandro Sánchez Hens y Paula Molina Castillo.
+>>>>>>> 3e2fe195532af2b0e25e057deb25e427a0fa37f6
 
 # PRÁCTICA 1: Entrada/Salida utilizando interrupciones con lenguaje C
 
