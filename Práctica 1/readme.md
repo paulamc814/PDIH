@@ -1,4 +1,4 @@
-Práctica realaizada por Alejandro Sánchez Hens y Paula Molina Castillo
+Práctica realizada por Alejandro Sánchez Hens y Paula Molina Castillo
 
 # PRÁCTICA 1: Entrada/Salida utilizando interrupciones con lenguaje C
 
