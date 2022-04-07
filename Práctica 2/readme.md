@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-Práctica realizada por Alejandro Sánchez Hens y Paula Molina Castillo
-=======
+
 Práctica realaizada por Alejandro Sánchez Hens y Paula Molina Castillo.
->>>>>>> 3e2fe195532af2b0e25e057deb25e427a0fa37f6
 
 # PRÁCTICA 2: Uso de bibliotecas de programación de interfaces de usuario en modo texto
 
@@ -14,23 +11,24 @@ sudo apt-get install libncurses5-dev libncursesw5-dev
 
 **COMPILACIÓN**
 
-gcc hello.c -o hello -lncurses
+<pre><code>gcc hello.c -o hello -lncurses
+</code></pre>
 
 ### Cuestiones a resolver
 * Instalar la librería ncurses, crear los programas de ejemplo ofrecidos más arriba, y comprobar su funcionamiento.
 
-*Crear un juego sencillo tipo “pong” partiendo del ejemplo del movimiento de la pelotita. Al iniciar el juego debe mostrarse un recuadro en una pantalla de bienvenida explicando los controles de juego. Tras una pausa se iniciará el juego en sí mismo.
+* Crear un juego sencillo tipo “pong” partiendo del ejemplo del movimiento de la pelotita. Al iniciar el juego debe mostrarse un recuadro en una pantalla de bienvenida explicando los controles de juego. Tras una pausa se iniciará el juego en sí mismo.
 
 ## Instala la libreería ncurses
 
 <p align="center">
-    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/instalacion.JPG " width= "700" >
+    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/instalacion.JPG " width= "700" >
 </p>
 
 ## Programa *hello.c*
 
 <p align="center">
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/hello.JPG " width= "700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/hello.JPG" width= "700" >
 </p>
 
 Esta función nos permite colocar el cursor en una posición determinada de la pantalla. El número de interrupción utilizada como podemos observar es la **interrupción 10**, y la *función número 2*. El registro AH = 2, DH = y, DL = x, BH = 0 y salida no tiene. 
