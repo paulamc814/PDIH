@@ -61,3 +61,17 @@ En este nuevo programa creamos una ventana y nos ayudamos de las siguientes func
 <p align="center">
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/ventana1.JPG" width= "700" >
 </p>
+
+## Programa *pelotita.c*
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pelotita.JPG" width= "700" >
+</p>
+
+Lo único que realiza este programa es mover de derecha a izquierda "un caracter o" a lo largo de la pantalla. 
+Usamos la función **noecho()** sólo se encarga de configurar la ventana para que no haya eco.
+La función **curs_set()** establece la apariencia del cursor en función del valor de visibilidad.
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pelotita1.JPG" width= "700" >
+</p>
