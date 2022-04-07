@@ -32,26 +32,34 @@ Práctica realaizada por Alejandro Sánchez Hens y Paula Molina Castillo.
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/hello.JPG" width= "700" >
 </p>
 
-Lo primero que tenemos que hacer es inicializar la pantalla con la función **initscr()**. Lo segundo es desarrollar el programa con todas las entradas y las salidas, la línea **printw("Holita")** imprime la cadena *Holita* con las coordenadas actuales. 
-Con la función **refresh()** se pasa el contenido de la memoria intermedia a la pantalla real. La función **getch()** espera la pulsación de una tecla y por último debemos liberar todos los recursos y devolver el terminal a su modo normal haciendo uso de la función **endwin()**.
+Lo primero que tenemos que hacer es inicializar la pantalla con la función **initscr()**. 
+Lo segundo es desarrollar el programa con todas las entradas y las salidas, la línea **printw("Holita")** imprime la cadena *Holita* con las coordenadas actuales. 
+Con la función **refresh()** se pasa el contenido de la memoria intermedia a la pantalla real. 
+La función **getch()** espera la pulsación de una tecla y por último debemos liberar todos los recursos y devolver el terminal a su modo normal haciendo uso de la función **endwin()**.
 
 <p align="center">
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/holita.JPG" " width= "700" >
 </p>
 
-## Función *setcursortype()*
+## Programa *ventana.c*
 
 <p align="center">
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/setcursortype1.JPG " width= "700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/ventana.JPG" width= "700" >
 </p>
 
-Esta función nos permite fijar el aspecto del cursor. Hemos utilizado la **interrupción 10** junto con la *función 1*.
-Para conseguir el cursor invisible, normal y grueso hemos cambiado los valores de los registros CH y CL. Como podemos observar no tiene salida. 
+En este nuevo programa creamos una ventana y nos ayudamos de las siguientes funciones en orden de aparción.
 
-Para comprobar su funcionamiento hemos llamado a la función mostrando los diferentes tipos de cursores. 
-
+* **init_pair()** : crea nuevos pares de colores de fondo y de caracteres y le asigna un número al nuevo par, de forma que luego se pueda usar en otras funciones.
+* **clear()** : limpia el contenido de la ventana.
+* **getmaxyx()** : calcula el tamaño en caracteres del terminal en este momento.
+* **newwin()** : crea una nueva ventana del tamaño que indiquemos.
+* **wbkgd()** : establece el color de fondo y de caracteres en la ventana recién creada.
+* **box()** : dibuja los marcos de la ventana recién creada.
+* **mvwprintw()** : muestra contenido (cadenas, números, etc) en la ventana actual.
+* **wrefresh()** : refresca el contenido para mostrar en la ventana los últimos cambios realizados en ella.
+ 
 <p align="center">
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/setcursortype2.JPG " width= "700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/ventana1.JPG" width= "700" >
 </p>
 
 ## Función *setvideomode()*
