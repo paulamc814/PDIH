@@ -78,7 +78,7 @@ La función **curs_set()** establece la apariencia del cursor en función del va
 
 ## Programa *pong.c*
 
-Nuestro programa se trata de un juego que consta de dos jugadores y golpear una pelota para mandársela al otro jugador y evitar que te metan gol. El primero que en el marcador llegue a 5 puntos gana y se acaba la partida. 
+Nuestro programa se trata de un juego que consta de dos jugadores y golpear con una pala una pelota para mandársela al otro jugador y evitar que te metan gol. El primero que en el marcador llegue a 5 puntos gana y se acaba la partida. 
 
 Los controles principales son; 
 * *Jugador1* **W**: Moverse hacia arriba, **S**: Moverse hacia abajo.
@@ -103,8 +103,24 @@ Establece los controles indicados anteriormente.
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong2.JPG" width= "700" >
 </p>
 
-Lo primero que hacemos es un **nodelay()** que habilitar o deshabilitar el bloqueo durante la lectura.
+Lo primero que hacemos es un **nodelay()** que habilitar o deshabilitar el bloqueo durante la lectura y establecemos los valores iniciales de las raquetas y la pelota.
 
 <p align="center">
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong3.JPG" width= "700" >
+</p>
+
+El bucle se encarga de dibujar todo el rato las dos palas en la posición en la que se encuentren, desde la posición inicial hasta 7 posiciones más abajo, tiene una altura de 8 píxeles. 
+También se encarga de dibujar la red , una línea trazada de arriba abajo , la pelota en la posición en la que esté, por defecto está comienza en medio de la pantalla y los marcadores.
+
+El *if* se encarga de calcular el movimiento de la pelota y estudiar los diferentes casos de movimiento de esta, si choca con una pala, si no choca...
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong4.JPG" width= "700" >
+</p>
+
+Por último entra en el *swtich*, evalua en cada iteración del bucle while qué tecla se ha pulsado, y respecto a ello se realiza la acción correspondiente, se mueve una de las dos palas, pone el juego en pausa...
+El bucle se repite hasta que se pulse el escape, o hasta que uno de los dos jugadores gane la partida.
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong5.JPG" width= "700" >
 </p>
