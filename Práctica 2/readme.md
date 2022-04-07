@@ -87,7 +87,7 @@ Los controles principales son;
 * La partida finaliza con el *escape*. 
 
 <p align="center">
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/1.JPG" width= "700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/1.jpg" width= "700" >
 </p>
 
 
