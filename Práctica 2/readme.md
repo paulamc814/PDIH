@@ -7,7 +7,8 @@ Práctica realaizada por Alejandro Sánchez Hens y Paula Molina Castillo.
 
 **INSTALACIÓN**
 
-sudo apt-get install libncurses5-dev libncursesw5-dev
+<pre><code>sudo apt-get install libncurses5-dev libncursesw5-dev
+</code></pre>
 
 **COMPILACIÓN**
 
@@ -31,12 +32,11 @@ sudo apt-get install libncurses5-dev libncursesw5-dev
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/hello.JPG" width= "700" >
 </p>
 
-Esta función nos permite colocar el cursor en una posición determinada de la pantalla. El número de interrupción utilizada como podemos observar es la **interrupción 10**, y la *función número 2*. El registro AH = 2, DH = y, DL = x, BH = 0 y salida no tiene. 
-
-Para comprobar su funcionamiento hemos colocado el cursor en la posición *gotoxy(15,7);* y hemos escrito Hola, por pantalla *printf("Hola");*
+Lo primero que tenemos que hacer es inicializar la pantalla con la función **initscr()**. Lo segundo es desarrollar el programa con todas las entradas y las salidas, la línea **printw("Holita")** imprime la cadena *Holita* con las coordenadas actuales. 
+Con la función **refresh()** se pasa el contenido de la memoria intermedia a la pantalla real. La función **getch()** espera la pulsación de una tecla y por último debemos liberar todos los recursos y devolver el terminal a su modo normal haciendo uso de la función **endwin()**.
 
 <p align="center">
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%201/images/gotoxy2.JPG " width= "700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/holita.JPG" " width= "700" >
 </p>
 
 ## Función *setcursortype()*
