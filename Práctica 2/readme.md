@@ -93,14 +93,18 @@ Los controles principales son;
 Comenzamos con las declaraciones, inicializaciones y las tareas principales del ncurses.
 
 <p align="center">
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong1.jpg" width= "700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong1.JPG" width= "700" >
 </p>
 
 La siguiente parte del código es el menú de los controles que tiene nuestro juego. 
 Establece los controles indicados anteriormente.
 
 <p align="center">
-<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong2.jpg" width= "700" >
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong2.JPG" width= "700" >
 </p>
 
 Lo primero que hacemos es un **nodelay()** que habilitar o deshabilitar el bloqueo durante la lectura.
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong3.JPG" width= "700" >
+</p>
