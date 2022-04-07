@@ -124,3 +124,10 @@ El bucle se repite hasta que se pulse el escape, o hasta que uno de los dos juga
 <p align="center">
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pong5.JPG" width= "700" >
 </p>
+
+Todo esto daría como resultado la siguiente pantalla de juego:
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/2.jpg" width= "700" >
+</p>
+
