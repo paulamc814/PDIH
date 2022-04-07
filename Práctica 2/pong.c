@@ -140,21 +140,6 @@ int main(int argc, char *argv[]){
  		    row_ball+= directiony;
  	    }
 
-        // char pulsacion = getch();
-
-        // if(pulsacion == 'w' && raqueta_jugador1_row > 0){
-        //     raqueta_jugador1_row--;
-        // }
-        // else if(pulsacion == 's' && raqueta_jugador1_row < max_rows/2 + 7){
-        //     raqueta_jugador1_row++;
-        // }
-        // else if(pulsacion == 'o' && raqueta_jugador2_row > 0){
-        //     raqueta_jugador2_row--;
-        // }
-        // else if(pulsacion == 'l' && raqueta_jugador2_row < max_rows/2 + 7){
-        //     raqueta_jugador2_row++;
-        // }
-
         switch (getch())
         {
         case KEY_UP:
@@ -181,7 +166,8 @@ int main(int argc, char *argv[]){
             getchar();
             break;
         case 0x1B:
-            endwin(); 
+            endwin();
+            exit(0); 
             break;
         
         default:

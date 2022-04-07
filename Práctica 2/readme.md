@@ -75,3 +75,20 @@ La función **curs_set()** establece la apariencia del cursor en función del va
 <p align="center">
 <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/pelotita1.JPG" width= "700" >
 </p>
+
+## Programa *pong.c*
+
+Nuestro programa se trata de un juego que consta de dos jugadores y golpear una pelota para mandársela al otro jugador y evitar que te metan gol. El primero que en el marcador llegue a 5 puntos gana y se acaba la partida. 
+
+Los controles principales son; 
+* *Jugador1* **W**: Moverse hacia arriba, **S**: Moverse hacia abajo.
+* *Jugador2* **Flecha hacia arriba**: Moverse hacia arriba, **Flecha hacia abajo**: Moverse hacia abajo.
+* La partida se puede pausar con la tecla **p**.
+* La partida finaliza con el *escape*. 
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%202/images/1.JPG" width= "700" >
+</p>
+
+
+
