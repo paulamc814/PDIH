@@ -1,5 +1,5 @@
 
-Práctica realaizada por Alejandro Sánchez Hens y Paula Molina Castillo.
+Práctica realizada por Alejandro Sánchez Hens y Paula Molina Castillo.
 
 # PRÁCTICA 2: Uso de bibliotecas de programación de interfaces de usuario en modo texto
 
