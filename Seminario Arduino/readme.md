@@ -95,6 +95,49 @@ void loop()
 <img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer1(Arduino).jpg" alt="update" width="500px">
 </p>
 
+
+### 5.2 Segunda
+
+**Implementar en los simuladores el programa de parpadeo de LED, ampliándolo con las modificaciones necesarias para que se encienda el LED solo cuando se pulse un interruptor conectado a la entrada digital 7.**
+
+El código es el mismo para ambos simuladores:
+
+~~~
+int interruptor = 0;
+
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(7, INPUT);
+}
+
+void loop()
+{
+  interruptor=digitalRead(7);
+  if(interruptor==HIGH){
+  	 digitalWrite(13, HIGH);
+  }
+  else{
+  	digitalWrite(13, LOW);
+  }
+}
+~~~
+*Simulador UnoArduSim*
+
 <p align="center">
-<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer1(Arduino).gif" alt="update" width="500px">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer2(UnoArduSim).JPG" alt="update" width="500px">
 </p>
+
+
+*Simulador TinkerCad*
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer2(TinkerCad).JPG" alt="update" width="500px">
+</p>
+
+*Placa de Arduino*
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer2(Arduino).jpg" alt="update" width="500px">
+</p>
+
