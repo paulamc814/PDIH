@@ -14,3 +14,87 @@ El éxito y repercusión que ha tenido se debe sobre todo a varios factores: muy
 potenciómetros, servomotores, buses de comunicación, generador de ondas y altavoz piezoeléctrico, entre otros elementos.
 
 ## 3. Simulador TinkerCad.
+
+*TinkerCad* Circuits permite diseñar circuitos electrónicos a través de un navegador en línea. Se pueden crear circuitos propios desde cero o modificar plantillas y otros proyectos compartidos públicamente.
+
+## 4. Ejemplo con TinkerCad.
+
+Vamos a hacer parpadear un LED usando una placa de prototipado. 
+
+Así quedaría el montaje en el simulador:
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/EjTinkerCad.JPG" alt="update" width="500px">
+</p>
+
+Este es el código que hemos utilizado para hacerlo posibile:
+
+~~~
+// C++ code
+void setup()
+{
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  delay(1000); // Espera de 1000 milisegundos
+  digitalWrite(13, LOW);
+  delay(1000); // Espera de 1000 milisegundos
+}
+~~~
+
+
+## 5. Cuestiones a resolver.
+
+### 5.1 Primera
+
+**Implementar en los simuladores el programa de parpadeo de LED, ampliándolo para para que encienda y apague alternativamente dos LED (uno rojo y otro verde), conectados a las salidas digitales 12 y 13 del Arduino, a un intervalo de 1.5 segundos.**
+
+El código es el mismo para ambos simuladores:
+
+~~~
+// C++ code
+void setup()
+{
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  digitalWrite(12, LOW);
+  
+  delay(1500); //Esperar 1000 milisegundos
+  
+  digitalWrite(13, LOW);
+  digitalWrite(12, HIGH);
+  
+  delay(1500);
+}
+~~~
+
+*Simulador UnoArduSim*
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer1(UnoArduSim).JPG" alt="update" width="500px">
+</p>
+
+
+*Simulador TinkerCad*
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer1(TinkerCad).JPG" alt="update" width="500px">
+</p>
+
+*Placa de Arduino*
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer1(Arduino).jpg" alt="update" width="500px">
+</p>
+
+<p align="center">
+<img src="https://github.com/paulamc814/PDIH/blob/main/Seminario%20Arduino/images/Ejer1(Arduino).gif" alt="update" width="500px">
+</p>
