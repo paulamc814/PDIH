@@ -125,7 +125,7 @@ closepath
 fill
 stroke
 
-</code</pre>
+</code></pre>
 
 Para establecer las distintas secciones de texto de nuestra tarjeta de visita usaremos el siguiente código:
 
