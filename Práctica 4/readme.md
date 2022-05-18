@@ -105,11 +105,7 @@ stroke
 
 Como podemos ver hemos definido la fuente que hemos usado, el tamaño de la misma, el texto y la rotación del mismo.
 
-A continuación podemos ver una imágen que nos muestra el resultado final.
-
-<p align="center">
-    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/micasita1.jpg" width= "400" >
-</p>
+A continuación podemos ver una imágen que nos muestra el <a href="https://github.com/AlexHens/PDIH/blob/main/practica4/micasita.jpg">resultado final</a>.
 
 ## 2. Tarjeta de visita
 
@@ -197,11 +193,7 @@ stroke
 
 Como podemos ver para crear un círuclo debemos establecer una serie de parámetros, como son las coordenadas x e y donde se dibujará, el radio de la circunferencia y hasta que ángulo quiere que se dibuje.
 
-A continuación podemos ver una imágen que nos muestra el resultado final.
-
-<p align="center">
-    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/tarjeta_visita1.jpg" width= "400" >
-</p>
+A continuación podemos ver una imágen que nos muestra el <a href="https://github.com/AlexHens/PDIH/blob/main/practica4/tarjeta_visita.jpg">resultado final</a>.
 
 ## 3. Dibujo de un corazón y texto
 
@@ -288,8 +280,5 @@ setfont
   stroke
 </code></pre>
 
-A continuación podemos ver una imágen que nos muestra el resultado final.
+A continuación podemos ver una imágen que nos muestra el <a href="https://github.com/AlexHens/PDIH/blob/main/practica4/corazon.jpg">resultado final</a>.
 
-<p align="center">
-    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/corazon1.jpg" width= "400" >
-</p>
