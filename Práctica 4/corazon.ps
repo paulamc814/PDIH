@@ -2,14 +2,25 @@
 
 % Rectángulo
 newpath
-150 550 moveto
-150 750 lineto
-450 750 lineto
-450 550 lineto
+140 550 moveto
+140 730 lineto
+500 730 lineto
+500 550 lineto
+1 setgray
 closepath
 
-0.95 setgray
 fill
+
+newpath
+0 0 0 setrgbcolor
+140 550 moveto
+140 730 lineto
+500 730 lineto
+500 550 lineto
+closepath
+
+
+
 stroke
 
 
@@ -35,9 +46,9 @@ stroke
 
 % Línea1
 newpath
-192 650 moveto
+196 640 moveto
 253 580 lineto
-318 650 lineto
+314 645 lineto
 closepath
 
 
@@ -48,9 +59,9 @@ stroke
 
 %Línea2
 newpath
-318 650 moveto
+314 640 moveto
 253 580 lineto
-192 650 lineto
+196 640 lineto
 closepath
 
 1 0 0 setrgbcolor
@@ -58,9 +69,35 @@ fill
 
 stroke
 
+%Texto
 
-stroke
+/Arial-bold findfont
+8 scalefont
+setfont
 
+  newpath
+  0.8 setgray
+  324 625 moveto
+  (La belleza no es nada, no permanece.) show
+  stroke
+
+  newpath
+  0.6 setgray
+  324 612 moveto
+  (No sabes la suerte que tienes sin belleza.) show
+  stroke
+
+  newpath
+  0.4 setgray
+  324 599 moveto
+  (Porque si le gustas a alguien,) show
+  stroke
+
+  newpath
+  0.2 setgray
+  324 586 moveto
+  (sabes que es por otra cosa.) show
+  stroke
 
 
 showpage
