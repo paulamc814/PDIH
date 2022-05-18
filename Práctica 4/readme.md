@@ -108,7 +108,7 @@ Como podemos ver hemos definido la fuente que hemos usado, el tamaño de la mism
 A continuación podemos ver una imágen que nos muestra el resultado final.
 
 <p align="center">
-    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/micasita.jpg" width= "200" >
+    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/micasita1.jpg" width= "400" >
 </p>
 
 ## 2. Tarjeta de visita
@@ -200,7 +200,7 @@ Como podemos ver para crear un círuclo debemos establecer una serie de parámet
 A continuación podemos ver una imágen que nos muestra el resultado final.
 
 <p align="center">
-    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/tarjeta_visita.jpg" width= "200" >
+    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/tarjeta_visita1.jpg" width= "400" >
 </p>
 
 ## 3. Dibujo de un corazón y texto
@@ -291,5 +291,5 @@ setfont
 A continuación podemos ver una imágen que nos muestra el resultado final.
 
 <p align="center">
-    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/corazon.jpg" width= "200" >
+    <img src="https://github.com/paulamc814/PDIH/blob/main/Pr%C3%A1ctica%204/corazon1.jpg" width= "400" >
 </p>
